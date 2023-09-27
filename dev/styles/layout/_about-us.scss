@@ -1,0 +1,124 @@
+.aboutUs {
+    margin-bottom: 70px;
+    &_container{
+        display: flex;
+        justify-content: space-between;
+        @include _960 {
+            display: block;
+        }
+    }
+    &_imgs{
+        position: relative;
+        margin-right: 20px;
+        @include _960 {
+            position: static;
+            margin: 0 0 30px 0;
+        }
+        @include _480 {
+            margin-bottom: 20px;
+        }
+    }
+    &_img1{
+        border-radius: 10px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        @include size(345px);
+        position: relative;
+        z-index: 2;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 345px;
+            object-fit: cover;
+            &:last-child {
+                display: none;
+            }
+        }
+        @include _960 {
+            width: 100%;
+            height: auto;
+            min-height: 1px;
+            img {
+                &:first-child {
+                    display: none;
+                }
+                &:last-child {
+                    display: block;
+                }
+            }
+        }
+    }
+    &_img2{
+        border-radius: 10px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        @include size(345px);
+        margin: -172px 0 0 243px;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 345px;
+            object-fit: cover;
+        }
+        @include _960 {
+            display: none;
+        }
+    }
+    &_text{
+        width: calc(50% - 10px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        span {
+            display: block;
+            margin-bottom: 10px;
+            font-family: Calibri;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #F1C10F;
+        }
+        .title {
+            margin-bottom: 20px;
+        }
+        p{
+            display: block;
+            margin-bottom: 30px;
+            font-family: Calibri;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 29px;
+            color: #696969;
+        }
+        .btn-more {
+            padding: 0 31px;
+            height: 50px;
+            border-radius: 5px;
+            font-family: Calibri;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+        }
+        @include _960 {
+            width: 100%;
+            span {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 5px;
+            }
+            .title {
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 25px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @include _480 {
+        margin-bottom: 50px;
+    }
+}

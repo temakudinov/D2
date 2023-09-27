@@ -1,0 +1,93 @@
+.ourBlog {
+    margin-bottom: 70px;
+    .stock_top {
+        margin-bottom: 30px;
+    }
+    &_items{
+        display: flex;
+        margin: 0 -10px;
+        .mainScreen_banner1-pagination {
+            display: none;
+        }
+        @include _960 {
+            margin: 0 -5px;
+        }
+        @include _480 {
+            padding-bottom: 20px;
+            position: relative;
+            .mainScreen_banner1-pagination {
+                display: block;
+                bottom: 0;
+            }
+        }
+    }
+    &_item{
+        width: 33.3%;
+        padding: 0 10px;
+        &-container{
+            border: 1px solid #EEEEEE;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 100%;
+            @include transition;
+            &:hover {
+                box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+            }
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+        &-content{
+            padding: 20px 10px 30px;
+            strong {
+                display: block;
+                color: #000;
+                margin-bottom: 10px;
+                font-family: Calibri;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 29px;
+                overflow: hidden;
+            }
+            p{
+                display: block;
+                font-family: Calibri;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                color: #696969;
+            }
+            @include _960 {
+                padding: 15px 15px 20px;
+                strong {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+            }
+        }
+        @include _960 {
+            padding: 0 5px;
+        }
+        @include _640 {
+            width: 50%;
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+        @include _480 {
+            width: 100%;
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+    @include _480 {
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,108 @@
+.popularInteriors {
+    margin-bottom: 70px;
+    .stock_top {
+        margin-bottom: 30px;
+    }
+    &_gallery{
+        position: relative;
+        &-fotos{
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        &-foto{
+            position: relative;
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                @include _480 {
+                    min-height: 244px;
+                    object-fit: cover;
+                }
+            }
+            &_description{
+                position: absolute;
+                display: flex;
+                align-items: flex-start;
+                &.description1{
+                    right: 9%; 
+                    top: 65%;
+                    @include _480 {
+                        top: 52%;
+                    }
+                }
+            }
+            &_text{
+                border-radius: 5px;
+                background-color: rgba(249, 249, 249, 0.8);
+                margin-right: 20px;
+                padding: 10px 30px 10px 10px;
+                width: 212px;
+                p{
+                    display: block;
+                    margin-bottom: 20px;
+                    color: #000;
+                    font-family: Calibri;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+                strong{
+                    display: block;
+                    color: #000;
+                    font-family: Calibri;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 29px;
+                }
+                @include _960 {
+                    p {
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+                    strong {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                }
+                @include _480 {
+                    padding-right: 10px;
+                    width: 155px;
+                    margin-right: 10px;
+                    p {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                }
+            }
+            &_marker{
+                @include size(30px);
+                border-radius: 100px;
+                background-color: #FECA0A;
+                border: 5px solid #F6F6F6;
+            }
+        }
+        &-arrows{
+            position: absolute;
+            top: -66px;
+            right: 0;
+            display: flex;
+            .mainScreen_banner1-arrow {
+                position: static;
+                transform: translate(0,0);
+                &.left {
+                    margin-right: 10px;
+                }
+            }
+            @include _960 {
+                top: -62px;
+            }
+            @include _480 {
+                display: none;
+            }
+        }
+    }
+    @include _480 {
+        margin-bottom: 50px;
+    }
+}

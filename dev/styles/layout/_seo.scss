@@ -1,0 +1,50 @@
+.seoText {
+    margin-bottom: 105px;
+    @include _960 {
+        margin-bottom: 70px;
+    }
+    .title {
+        margin-bottom: 20px;
+    }
+    &_content{
+        position: relative;
+        p {
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25px;
+            color: #595959;
+        }
+        &:after {
+            @include after;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height:60px;
+            width: 100%;
+            background: url(../img/shadow.svg) no-repeat 0 100%;
+            background-size: 100% auto;
+        }
+        .btn-more {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            z-index: 2;
+            font-size: 16px;
+        }
+        @include _960 {
+            p{
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .btn-more {
+                bottom: 20px;
+            }
+        }
+    }
+    @include _480 {
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,151 @@
+.lastReviews {
+    margin-bottom: 70px;
+    .stock_top {
+        margin-bottom: 30px;
+    }
+    &_slider{
+        position: relative;
+        .mainScreen_banner1-pagination {
+            position: static;
+            transform: translate(0, 0);
+            ul {
+                justify-content: center;
+            }
+        }
+        &-items{
+            display: flex;
+            margin: 0 -10px 30px;
+            @include _960 {
+                margin: 0 -5px 10px;
+            }
+        }
+        &-item{
+            width: 25%;
+            padding: 0 10px;
+            &_top{
+                border-radius: 5px;
+                border: 1px solid #EEEEEE;
+                min-height: 100px;
+                padding: 1px;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                img {
+                    display: block;
+                    margin-right: 20px;
+                    width: auto;
+                    height: 100%;
+                }
+                p{
+                    display: block;
+                    color: #000;
+                    font-family: Calibri;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    padding-right: 15px;
+                }
+                @include _960 {
+                    min-height: 87px;
+                    margin-bottom: 10px;
+                    p {
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+                }
+            }
+            &_content{
+                &-row{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+                    @include _960 {
+                        margin-bottom: 10px;
+                    }
+                }
+                p{
+                    display: block;
+                    font-family: Calibri;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 17px;
+                    color: #696969;
+                    @include _960 {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                }
+                .stock_item-reviews_stars {
+                    min-width: 85px;
+                }
+                .stock_item-reviews_stars ul {
+                    margin: 0;
+                    justify-content: flex-end;
+                }
+                .stock_item-reviews_stars li {
+                    margin: 0 0 0 1px;
+                    @include _960 {
+                        a{
+                            @include size(10px);
+                            &:after {
+                                background-size: cover;
+                            }
+                            &:before {
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+                &-nameData{
+                    display: flex;
+                    flex-wrap: wrap;
+                    strong {
+                        display: block;
+                        font-family: Calibri;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 20px;
+                        color: #000;
+                        margin-right: 10px;
+                    }
+                    span {
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        color: #959595;
+                    }
+                    @include _960 {
+                        strong {
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                        span {
+                            font-size: 12px;
+                            line-height: 17px;
+                        }
+                    }
+                }
+            }
+            @include _960 {
+                width: 33.3%;
+                padding: 0 5px;
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+            @include _640 {
+                width: 50%;
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+            @include _480 {
+                width: 100%;
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
