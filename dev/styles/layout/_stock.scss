@@ -51,7 +51,7 @@
         align-items: flex-start;
         justify-content: space-between;
         position: relative;
-        margin: 0 -10px;
+        margin: 0 -10px 10px;
         .mainScreen_banner1-pagination {
             display: none;
         }
@@ -73,6 +73,7 @@
         top: 15px;
         right: 15px;
         @include size(24px);
+        z-index: 2;
         &:after {
             @include after;
             position: absolute;
@@ -138,6 +139,7 @@
             height: auto;
             max-height: 345px;
             object-fit: cover;
+            border-radius: 10px;
         }
         &-inStock {
             color: #000;
@@ -230,6 +232,33 @@
                 }
             }
         }
+        &.ends {
+            .stock_item-inStock i {
+                background-color: #F1C10F;
+            }
+        }
+        &.noAvailability {
+            .stock_item-inStock i {
+                background-color: #DE2B2B;
+            }
+            .stock_img {
+                position: relative;
+                &:after {
+                    @include after;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(238, 238, 238, 0.8);
+                }
+            }
+        }
+        &.toOrder {
+            .stock_item-inStock i {
+                background-color: #000000;
+            }
+        }
         @include _960 {
             width: 25%;
             padding: 0 5px;
@@ -270,6 +299,7 @@
             position: absolute;
             bottom: 20px;
             left: 25px;
+            z-index: 2;
             right: 25px;
             @include transition;
             opacity: 0;
@@ -319,6 +349,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            z-index: 2;
         }
         @include _960 {
             margin-bottom: 10px;
@@ -401,7 +432,7 @@
             right: -10px;
             padding: 0 10px 20px;
             border-radius: 0 0 10px 10px;
-            z-index: 2;
+            z-index: 3;
             top: 100%;
             &:after {
                 @include after;
@@ -516,6 +547,100 @@
         }
         @include _960 {
             padding-bottom: 0;
+        }
+    }
+    &_banner{
+        width: 33.3%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        &-body{
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid #EEEEEE;
+            position: relative;
+        }
+        a.btn {
+            position: absolute;
+            top: 106px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: calc(100% - 40px);
+            padding: 0 20px;
+            height: 55px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+        @include _960 {
+            a.btn {
+                top: 50px;
+                width: calc(100% - 24px);
+                height: 30px;
+                font-size: 13px;
+                line-height: 13px;
+            }
+        }
+    }
+    &_banner2{
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+        img {
+            display: block;
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        &-body{
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+        }
+        &-info{
+            position: absolute;
+            left: 35px;
+            top: 50%;
+            transform: translate(0, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            span {
+                display: block;
+                color: #000;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+        }
+        a.btn {
+            padding: 0 20px;
+            height: 49px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+    }
+    &_dop{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        a.btn {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 16px;
+        }
+        .pageNavigation {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 0;
         }
     }
     @include _960 {

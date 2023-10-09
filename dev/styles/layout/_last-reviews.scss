@@ -1,5 +1,8 @@
 .lastReviews {
     margin-bottom: 70px;
+    @include _480 {
+        margin-bottom: 50px;
+    }
     .stock_top {
         margin-bottom: 30px;
     }

@@ -48,3 +48,181 @@
         margin-bottom: 50px;
     }
 }
+.innerSeoText {
+    margin-bottom: 70px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    &-info{
+        width: 58%;
+        padding-right: 20px;
+    }
+    &-faq{
+        width: 42%;
+        border: 1px solid #EEEEEE;
+        border-radius: 10px;
+        &_content{
+            max-height: 0px;
+            @include transition;
+            opacity: 0;
+            pointer-events: none;
+            padding: 0 20px 20px 20px;
+            margin-top: -10px;
+            p {
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 22px;
+                color: #595959;
+                span {
+                    text-decoration: underline;
+                    font-weight: 700;
+                }
+            }
+        }
+        &_title{
+            min-height: 65px;
+            @include transition;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 0 45px 0 20px;
+            position: relative;
+            color: #000;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 25px;
+            &:after{
+                @include after;
+                @include transition;
+                background: url(../img/icon-arrow-bot-black.svg) no-repeat 50% 50%;
+                @include size(14px);
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%) rotate(0deg);
+                right: 20px;
+            }
+        }
+        &_item{
+            border-bottom: 1px solid #EEEEEE;
+            &:last-child {
+                border: none;
+            }
+            &.open {
+                .innerSeoText-faq_content {
+                    max-height: 100000px;
+                    pointer-events: all;
+                    opacity: 1;
+                }
+                .innerSeoText-faq_title {
+                    &:after{
+                        transform: translate(0, -50%) rotate(180deg);
+                    }
+                }
+            }
+        }
+        
+    }
+    &-button{
+        width: 58%;
+        display: flex;
+        justify-content: center;
+        a.btn {
+            padding: 0 37px;
+            font-size: 16px;
+        }
+    }
+    &-block{
+        margin-bottom: 30px;
+        &:last-child {
+            margin: 0;
+        }
+        .title {
+            margin-bottom: 20px;
+        }
+        p {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25px;
+            color: #595959;
+            &:last-child {
+                margin: 0;
+            }
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li{
+            width: 250px;
+            padding-right: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            max-width: 33.3%;
+        }
+        a {
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25px;
+            color: #595959;
+            text-decoration: none;
+            position: relative;
+            @include transition;
+            &:after{
+                @include after;
+                position: absolute;
+                @include transition;
+                bottom: 4px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: #595959;
+            }
+            &:hover:after {
+                width: 0;
+            }
+        }
+    }
+    @include _960 {
+        display: block;
+        &-info {
+            width: 100%;
+            padding-right: 0px;
+            margin-bottom: 10px;
+        }
+        &-block {
+            p {
+                font-size: 14px;
+                line-height: 22px;
+            }
+            li {
+                width: 33.3%;
+                max-width: 100%;
+                a {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+        }
+        &-faq {
+            width: 100%;
+            margin-bottom: 10px;
+            border: 1px solid #EEEEEE;
+            border-radius: 10px;
+        }
+        &-button {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    @include _480 {
+        margin-bottom: 50px;
+        .innerSeoText-block li {
+            width: 50%;
+            padding: 0;
+        }
+    }
+}

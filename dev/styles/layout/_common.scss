@@ -49,3 +49,136 @@ html, body{
         -webkit-tap-highlight-color: transparent;
     }
 }
+.bread-crumbs {
+	margin-bottom: 10px;
+	ul {
+		display: flex;
+	}
+	li{
+		padding-right: 20px;
+		position: relative;
+		margin-right: 10px;
+		color: #000;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 17px;
+		&:after{
+			@include after;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translate(0, -50%);
+			background: url(../img/arrow-bc.svg) no-repeat;
+			@include size(10px);
+		}
+		&:last-child {
+			padding: 0;
+			margin: 0;
+			&:after {
+				display: none;
+			}
+		}
+	}
+	a{
+		display: block;
+		text-decoration: none;
+		color: #696969;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 17px;
+		@include transition;
+		position: relative;
+		&:after{
+			@include after;
+			position: absolute;
+			@include transition;
+			bottom: 1px;
+			left: 0;
+			width: 0;
+			height: 1px;
+			background-color: #696969;
+		}
+		&:hover:after {
+			width: 100%;
+		}
+	}
+}
+.pageNavigation {
+	ul {
+		display: flex;
+		align-items: center;
+	}
+	li {
+		margin-right: 10px;
+		&:first-child {
+			margin-right: 15px;
+		}
+		&:last-child {
+			margin: 0 0 0 5px;
+		}
+	}
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		text-decoration: none;
+		@include transition;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 16px;
+		color: #696969;
+		height: 30px;
+		border-radius: 50%;
+		border: 1px solid transparent;
+		position: static;
+		transform: translate(0, 0);
+		&.mainScreen_banner1-arrow {
+			background-color: #F4F4F4;
+			&:hover {
+				background-color: #DFDFDF;
+			}
+			&.left {
+				&:after {
+					opacity: 0.4;
+				}
+				&:hover {
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+			&.right {
+				&:after {
+					opacity: 0.4;
+				}
+				&:hover {
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		text-decoration: none;
+		@include transition;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 16px;
+		color: #696969;
+		height: 30px;
+		border-radius: 50%;
+		border: 1px solid transparent;
+	}
+	li.active a {
+		border-color: #000;
+		font-weight: 700;
+		width: 30px;
+		color: #000;
+	}
+}
