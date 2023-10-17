@@ -28,7 +28,6 @@ body {
 	font-size: 34px;
 	font-weight: 700;
 	line-height: 42px;
-	text-align: left;
 	color: #000;
 	@include _960 {
 		font-size: 30px;
@@ -55,27 +54,34 @@ html, body{
 		display: flex;
 	}
 	li{
-		padding-right: 20px;
+		padding-left: 20px;
 		position: relative;
 		margin-right: 10px;
 		color: #000;
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 17px;
+		white-space: nowrap;
 		&:after{
 			@include after;
 			position: absolute;
-			right: 0;
+			left: 0;
 			top: 50%;
 			transform: translate(0, -50%);
-			background: url(../img/arrow-bc.svg) no-repeat;
+			background: url(../img/arrow-bc-gray.svg) no-repeat;
 			@include size(10px);
 		}
-		&:last-child {
+		&:first-child {
 			padding: 0;
-			margin: 0;
 			&:after {
 				display: none;
+			}
+		}
+		&:last-child {
+			margin: 0;
+			&:after{
+				background: url(../img/arrow-bc.svg) no-repeat;
+				@include size(10px);
 			}
 		}
 	}

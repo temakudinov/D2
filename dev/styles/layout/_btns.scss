@@ -7,6 +7,58 @@
     text-align: center;
     @include transition;
     white-space: nowrap;
+    &-credit{
+        border-radius: 5px;
+        border: 1px solid #000;
+        height: 50px;
+        padding: 0 19px;
+        color: #000;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+        i{
+            display: block;
+            position: relative;
+            @include size(24px);
+            margin-right: 10px;
+            &:after{
+                @include after;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                @include transition;
+                bottom: 0;
+                opacity: 1;
+                background: url(../img/icon-kredit.svg) no-repeat;
+            }
+            &:before{
+                @include after;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                right: 0;
+                @include transition;
+                bottom: 0;
+                background: url(../img/icon-kredit-white.svg) no-repeat;
+            }
+        }
+        &:hover {
+            background-color: #000;
+            color: #fff;
+            i {
+                &:after {
+                    opacity: 0;
+                }
+            }
+            i {
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
     &-more {
         border-radius: 3px;
         background-color: #FECA0A;
@@ -36,6 +88,33 @@
         opacity: 0.7;
         &:hover {
             opacity: 1;
+        }
+    }
+    &-closeBlack {
+        @include size(30px);
+        @include transition;
+        background: url(../img/icon-close.svg) no-repeat 50% 50%;
+        opacity: 1;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    &-closeGray {
+        @include size(40px);
+        @include transition;
+        background: url(../img/close-gray.svg) no-repeat 50% 50%;
+        opacity: 1;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    &-closeBlackSmall {
+        @include size(20px);
+        @include transition;
+        background: url(../img/icon-close-black-small.svg) no-repeat 50% 50%;
+        opacity: 1;
+        &:hover {
+            opacity: 0.7;
         }
     }
     &-catalog {

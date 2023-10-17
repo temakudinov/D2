@@ -14,6 +14,11 @@
   width: $width;
   height: $height;
 }
+@mixin _1366 {
+  @media screen and (max-width: 1366px){
+      @content;
+  }
+}
 @mixin _1240 {
   @media screen and (max-width: 1240px){
       @content;
