@@ -2,16 +2,16 @@
   "version": "0.1.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {},
   "devDependencies": {
     "browser-sync": "latest",
-    "gulp": "3.9.1",
+    "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
     "gulp-plumber": "latest",
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
-    "gulp-uglify": "latest"
+    "gulp-uglify": "latest",
+    "sass": "^1.68.0"
   },
   "author": "",
   "license": "MIT"

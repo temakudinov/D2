@@ -21,14 +21,14 @@
         margin-bottom: 10px;
         a {
             display: block;
-            @include size(208px, 69px);
-            background: url(../img/footer-logo.svg) no-repeat;
+            @include size(190px, 57px);
+            background: url(../img/icon-logo.svg) no-repeat 50% 50%;
+            background-size: contain;
         }
         @include _960 {
             margin: 0;
             a {
-                @include size(159px, 52px);
-                background-size: 100% 100%;
+                @include size(149px, 45px);
             }
         }
     }

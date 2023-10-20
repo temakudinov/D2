@@ -56,11 +56,14 @@
         margin-right: 35px;
         a {
             display: block;
-            background: url(../img/logo.svg) no-repeat;
-            @include size(208px, 60px);
+            background: url(../img/icon-logo.svg) no-repeat 50% 50%;
+            @include size(208px, 69px);
+            background-size: contain;
+            @include _1366{
+                @include size(194px, 64px);
+            }
             @include _960{
                 @include size(159px, 52px);
-                background-size: cover;
             }
             @include _480 {
                 @include size(113px, 37px);
