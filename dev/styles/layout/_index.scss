@@ -627,3 +627,119 @@
         }
     }
 }
+.errorPage {
+    padding: 100px 0 30px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    strong {
+        display: block;
+        color: #000;
+        margin-bottom: 30px;
+        font-size: 128px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 154px;
+    }
+    span {
+        display: block;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 48px;
+        text-align: center;
+        color: #000;
+        margin-bottom: 30px;
+    }
+    a.btn.btn-more {
+        border-radius: 5px;
+        height: 49px;
+        padding: 0 76px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    @include _640 {
+        span {
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
+}
+.writeToUs {
+    max-width: 1064px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #F6F6F6;
+    padding: 30px 35px;
+    .title {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    span {
+        display: block;
+        text-align: center;
+        margin-bottom: 25px;
+        color: #000;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20px;
+    }
+    &_form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        input[type="text"] {
+            display: block;
+            border: none;
+            background-color: #FFFFFF;
+            border-radius: 5px;
+            height: 44px;
+            padding: 0 25px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #949494;
+            font-family: 'Calibri';
+            margin-bottom: 25px;
+            width: calc(50% - 22px);
+            &::placeholder {
+                font-size: 16px;
+                font-weight: 400;
+                color: #949494;
+                font-family: 'Calibri';
+            }
+        }
+        textarea {
+            display: block;
+            border: none;
+            background-color: #FFFFFF;
+            border-radius: 5px;
+            height: 125px;
+            width: 100%;
+            padding: 13px 25px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #949494;
+            margin-bottom: 25px;
+            font-family: 'Calibri';
+            &::placeholder {
+                font-size: 16px;
+                font-weight: 400;
+                color: #949494;
+                font-family: 'Calibri';
+            }
+        }
+        input[type="submit"] {
+            border: none;
+            cursor: pointer;
+            margin: 0 auto; 
+            height: 40px;
+            padding: 0 40px;
+            font-family: 'Calibri';
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+}
