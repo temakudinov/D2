@@ -2957,6 +2957,477 @@ html:focus, body:focus {
   }
 }
 
+.private-office {
+  padding-top: 10px;
+  position: relative;
+}
+.private-office .shareList {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  padding-left: 33px;
+}
+.private-office .shareList:after {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: url(../img/icon-link.svg) no-repeat;
+  width: 24px;
+  height: 24px;
+}
+.private-office_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.private-office_sidebar {
+  min-width: 437px;
+  width: 437px;
+  margin-right: 25px;
+}
+.private-office_user {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.private-office_user-foto img {
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin-right: 13px;
+  min-width: 46px;
+}
+.private-office_user-info {
+  width: 100%;
+  padding-top: 8px;
+}
+.private-office_user-info span {
+  display: block;
+  color: #000;
+  margin-bottom: 7px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+.private-office_user-info p {
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #4F4F4F;
+}
+.private-office_user-info p b {
+  margin-left: 40px;
+}
+.private-office_user-edit {
+  display: block;
+  margin-left: 20px;
+  background: url(../img/icon-edit.svg) no-repeat;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.private-office_items {
+  background-color: #F6F6F6;
+}
+.private-office_item a {
+  display: flex;
+  min-height: 78px;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  padding: 0 0 0 20px;
+  border-bottom: 1px solid transparent;
+}
+.private-office_item a:hover i {
+  opacity: 1;
+}
+.private-office_item a img {
+  display: block;
+  min-width: 24px;
+  margin-right: 20px;
+}
+.private-office_item a i {
+  display: block;
+  margin-left: 10px;
+  background: url(../img/arrow-right-black-big.svg) no-repeat;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: 2px;
+  opacity: 0;
+}
+.private-office_item.active a {
+  border-bottom: 1px solid #D9D9D9;
+}
+.private-office_item.active a i {
+  opacity: 1;
+}
+.private-office_item.wishList.active a i {
+  transform: rotate(90deg);
+}
+.private-office_item.wishList.active ul {
+  display: block;
+  border-bottom: 1px solid #D9D9D9;
+}
+.private-office_item.wishList.active ul li {
+  padding-left: 65px;
+}
+.private-office_item.wishList.active ul li.active a {
+  font-weight: 700;
+}
+.private-office_item.wishList.active ul a {
+  border: none;
+  min-height: 67px;
+  position: relative;
+  padding-left: 15px;
+}
+.private-office_item.wishList.active ul a:after {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #000;
+}
+.private-office_item.wishList.active ul a:hover {
+  font-weight: 700;
+}
+.private-office_item.exit a {
+  border: none;
+}
+.private-office_item.exit a:hover {
+  border: none;
+}
+.private-office_item ul {
+  display: none;
+}
+.private-office_content {
+  width: 100%;
+}
+.private-office_content .pageNavigation ul {
+  justify-content: flex-end;
+}
+.private-office_reviews {
+  margin-bottom: 70px;
+}
+.private-office_review {
+  margin-bottom: 40px;
+  border-radius: 22px;
+  border: 1px solid #DEDEDE;
+  position: relative;
+  padding: 20px 100px 20px 20px;
+  display: flex;
+}
+.private-office_review-btn {
+  position: absolute;
+  right: 30px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  background: url(../img/arrow-bot-black-big.svg) no-repeat;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.private-office_review:last-child {
+  margin: 0;
+}
+.private-office_review .private-office_review-infoDop {
+  display: none;
+}
+.private-office_review-info {
+  min-width: 400px;
+  width: 400px;
+  padding-right: 20px;
+}
+.private-office_review-info .private-office_review-infoDop {
+  display: block;
+}
+.private-office_review-infoBlock {
+  display: flex;
+  align-items: center;
+}
+.private-office_review-infoDop {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  padding-top: 0px;
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+}
+.private-office_review-infoDop .card-product_tabs-review_advantagesFlaws-block.advantages {
+  margin-bottom: 15px;
+}
+.private-office_review-infoDop .card-product_tabs-review_advantagesFlaws-block strong {
+  font-size: 14px;
+  line-height: 17px;
+}
+.private-office_review-infoDop .card-product_tabs-review_advantagesFlaws-block p {
+  line-height: 21px;
+  font-size: 14px;
+}
+.private-office_review-description .stock_item-reviews_stars {
+  margin: 0 0 6px 0;
+}
+.private-office_review-description .stock_item-reviews_stars ul {
+  margin: 0;
+}
+.private-office_review-description span {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #434343;
+  margin-bottom: 6px;
+}
+.private-office_review-description p {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #959595;
+}
+.private-office_review-foto {
+  margin-right: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #EEEEEE;
+}
+.private-office_review-foto img {
+  display: block;
+}
+.private-office_review-text {
+  width: 100%;
+  padding-top: 9px;
+}
+.private-office_review-text span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #959595;
+}
+.private-office_review-text p {
+  display: block;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #696969;
+  max-height: 43px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.private-office_review.open {
+  padding-right: 20px;
+}
+.private-office_review.open .private-office_review-text p {
+  max-height: 100%;
+}
+.private-office_review.open .private-office_review-text {
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+.private-office_review.open .private-office_review-btn {
+  top: auto;
+  transform: translate(0, 0) rotate(180deg);
+  bottom: 20px;
+}
+.private-office_review.open .private-office_review-infoDop {
+  max-height: 100%;
+  padding-top: 30px;
+  opacity: 1;
+}
+@media screen and (max-width: 1366px) {
+  .private-office_review {
+    padding-right: 80px;
+  }
+  .private-office_review-btn {
+    right: 15px;
+  }
+  .private-office_review-text p {
+    max-height: 23px;
+  }
+}
+.private-office_shareList {
+  margin-bottom: 40px;
+}
+.private-office_shareList .stock_items {
+  margin: 0 -10px;
+  flex-wrap: wrap;
+}
+.private-office_shareList .stock_like {
+  background: url(../img/icon-like-black.svg) no-repeat;
+}
+.private-office_shareList .stock_like:after {
+  display: none;
+}
+.private-office_shareList .stock_like:before {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .private-office {
+    padding-top: 5px;
+  }
+  .private-office .title {
+    display: none;
+  }
+  .private-office_container {
+    display: block;
+  }
+  .private-office_sidebar {
+    min-width: 1px;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .private-office_user {
+    display: none;
+  }
+  .private-office_items {
+    margin: 0 -20px;
+  }
+  .private-office_item {
+    display: none;
+  }
+  .private-office_item.active {
+    display: block;
+  }
+  .private-office_item.active a {
+    border: none;
+    min-height: 56px;
+    font-size: 16px;
+    position: relative;
+  }
+  .private-office_item.active a i {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+  }
+  .private-office_reviews {
+    margin-bottom: 40px;
+  }
+  .private-office_review {
+    margin-bottom: 20px;
+  }
+  .private-office .pageNavigation ul {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .private-office_review-info {
+    min-width: 320px;
+    width: 320px;
+    padding-right: 20px;
+  }
+  .private-office_review {
+    padding-right: 20px;
+  }
+  .private-office_review-btn {
+    top: auto;
+    transform: translate(0, 0);
+    bottom: 10px;
+  }
+  .private-office_review.open {
+    display: block;
+  }
+  .private-office_review.open .private-office_review-info {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  .private-office_review.open .private-office_review-info .private-office_review-infoDop {
+    display: none;
+  }
+  .private-office_review.open .private-office_review-infoDop {
+    display: block;
+    padding: 0;
+  }
+  .private-office_review.open .private-office_review-text {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .private-office_review-text {
+    display: none;
+  }
+  .private-office_review-info {
+    min-width: 1px;
+    width: 100%;
+    padding-right: 30px;
+  }
+  .private-office_review-btn {
+    bottom: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .private-office_review-foto {
+    margin-right: 13px;
+  }
+  .private-office_review-foto img {
+    width: 63px;
+    height: 63px;
+    min-width: 63px;
+  }
+  .private-office_review-description span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .private-office_review-description p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .private-office_review.open .private-office_review-info {
+    margin-bottom: 30px;
+  }
+  .private-office_review.open .private-office_review-text {
+    display: block;
+  }
+}
+
 .card-product {
   padding-top: 20px;
 }
