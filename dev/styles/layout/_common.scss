@@ -11,6 +11,9 @@ body {
 	position:relative;
 	-webkit-text-size-adjust: none;
 }
+input {
+	font-family: 'Calibri';
+}
 #wrapper{
 	overflow:hidden;
 }
@@ -142,7 +145,7 @@ html, body{
 		&.mainScreen_banner1-arrow {
 			background-color: #F4F4F4;
 			&:hover {
-				background-color: #DFDFDF;
+				background-color: #FECA0A;
 			}
 			&.left {
 				&:after {
