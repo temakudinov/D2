@@ -249,6 +249,27 @@
             ul {
                 display: none;
             }
+            &.open ul {
+                display: block;
+                padding: 0 20px 25px;
+                li {
+                    a {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                }
+            }
+            &.twoColumns.open ul{
+                display: flex;
+                li:nth-child(odd) {
+                    min-width: 30%;
+                    width: 30%;
+                }
+                li:nth-child(even) {
+                    min-width: 70%;
+                    width: 70%;
+                }
+            }
             .footer_titleColumn {
                 padding: 30px 20px;
                 position: relative;
